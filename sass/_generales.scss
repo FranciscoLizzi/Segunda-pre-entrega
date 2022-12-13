@@ -1,0 +1,124 @@
+// RESET, MIXIN, HEADER Y FOOTER //
+
+//RESET//
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+//MIXIN//
+
+@mixin sizes ($width, $height) {
+    width: $width;
+    height: $height;
+} 
+
+// HEADER//
+
+header {
+    grid-area: header;
+}
+
+.top-bar {
+    background-color: #4fb8cf;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.logo-redes li{
+    @include sizes(18px,18px);
+    padding: 5px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+}
+
+.nav-link {
+    color: rgb(56, 56, 114);
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    padding: 0 20px;
+
+    &:hover {
+        color: #4fb8cf;
+        scale: 1.05;
+        transition-duration: 10ms;
+    }
+}
+
+.navbar-toggler {
+    color: white;
+    background-color: white;
+    border-color: #04326d;
+    border-width: 2px;
+}
+
+ul li {
+    list-style-type: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    color: #04326d;
+    display: flex;
+    padding: 20px;
+
+    a {
+        text-decoration: none;
+        color: #04326d;
+        letter-spacing: 1.5px;
+    }
+}
+
+// FOOTER //
+
+footer {
+    background-color: #454545;
+    display: flex;
+    padding: 0;
+    border: none;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    grid-area: footer;
+}
+
+.ubicacion-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3,p {
+        color: white;
+        font-weight: 400;
+        font-family: 'Roboto';
+    }
+}
+
+.texto-footer {
+    display: flex;
+    justify-content: center;
+
+    p,a {
+        color: white;
+        text-decoration: none;
+        font-family: 'Roboto';
+        align-items: center;
+    }
+}
+
+.redes-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-redes-footer {
+    list-style-type: none;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+

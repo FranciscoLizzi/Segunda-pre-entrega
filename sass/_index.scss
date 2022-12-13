@@ -1,0 +1,46 @@
+.img-principal {
+    @extend .principal-contacto;
+    opacity: 80%;
+
+        &:hover {
+            opacity: 90%;
+        }
+}
+
+.textoPrincipal {
+    h1 {
+        @extend .principal-contacto;
+        font-family: 'Open Sans', sans-serif;
+        color: $color;
+        padding: 35px;
+    }
+    p {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: large;
+        font-weight: 300;
+    }
+}
+
+// MEDIA-QUERIES//
+
+@media (max-width:576px) {
+    .img-principal {
+        display: none;
+    }
+}
+
+@media (max-width:768px) {
+    .textoPrincipal h1 {
+        font-size: x-large;
+    }
+
+    .textoPrincipal p {
+        font-size: medium;
+    }
+}
+
+@media (min-width:992px) {
+    .textoPrincipal p {
+        font-size: x-large;
+    }
+}

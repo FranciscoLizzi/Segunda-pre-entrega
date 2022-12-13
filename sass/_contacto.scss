@@ -1,0 +1,43 @@
+.portada-contacto {
+    display: flex;
+    background-color: #ebe9e9;
+    margin-bottom: 30px;
+
+    img {
+        width: 40%;
+        height: 350px;
+        opacity: 80%;
+    }
+
+    h1 {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Roboto';
+        font-size: xx-large;
+        color: $color;
+    }
+}
+
+.principal-contacto {
+    display: flex;
+    justify-content: center;
+}
+
+//MEDIA-QUERIES//
+
+@media (max-width:992px) {
+    .portada-contacto img {
+        display: none;
+    }
+    .portada-contacto h1 {
+        width: 100%;
+    }
+}
+
+@media (max-width:500px) {
+    .portada-contacto h1 {
+        font-size: x-large;
+    }
+}

@@ -1,0 +1,76 @@
+.portada-productos {
+    display: flex;
+    background-color: #ebe9e9;
+    margin-bottom: 30px;
+
+    img {
+        @include sizes (40%, 25em);
+        opacity: 80%;
+    }
+
+    h1 {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Roboto';
+        font-size: xx-large;
+        color: $color;
+    }
+}
+
+.principal-productos {
+    display: flex;
+
+    h2 {
+        margin-bottom: 20px;
+        font-family: 'Open Sans';
+        color: $color;
+        font-weight: 500;
+        font-size: larger;
+        display: flex;
+    }
+
+    p {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 500;
+    }
+}
+
+.principal-productos img {
+    @include sizes (10em, 10em);
+    
+    &:hover {
+        scale: 1.05;
+        transition: 2ms;
+    }
+}
+
+.texto-productos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+//MEDIA-QUERIES//
+
+@media (max-width:500px) {
+    .principal-productos img {
+        @include sizes (8em, 8em);
+    }
+}
+
+@media (max-width:768px) {
+    .portada-productos img {
+        display: none;
+    }
+    .portada-productos h1 {
+        width: 100%;
+    }
+}
+
+@media (min-width:992px) {
+    .principal-productos h2 {
+        font-size: x-large;
+    }
+}
